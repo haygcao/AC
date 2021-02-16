@@ -22,8 +22,9 @@ jobs:
         QCZJ_CASH: ${{ secrets.QCZJ_CASH }}
     steps:
       - name: Checkout
-        run: |
-          git clone https://github.com/ziye12/QCZJSPEED.git ~/QCZJSPEED
+        uses: actions/checkout@v2
+        with:
+          repository: Maomaoyu0319/AC
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -31,12 +32,10 @@ jobs:
       - name: npm install
         if: env.QCZJ_GetUserInfoHEADER
         run: |
-          cd ~/QCZJSPEED
           npm install
       - name: '运行 【汽车之家极速版】'
         if: env.QCZJ_GetUserInfoHEADER
         run: |
-          cd ~/QCZJSPEED
           node Task/qczjspeed.js
         env:
           
