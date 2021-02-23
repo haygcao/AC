@@ -30,7 +30,7 @@ jobs:
         run: |
           cd ~/JavaScript
           npm install
-      - name: '运行 【笑谱】'
+      - name: '运行 【步步宝】'
         if: env.BBB_bububaoTOKEN
         run: |
           cd ~/JavaScript
