@@ -29,7 +29,7 @@ jobs:
       - name: '运行 【rl】'
         if: env.RLHEADER
         run: |
-          node rl.js
+          node Task/rl.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
