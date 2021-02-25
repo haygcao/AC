@@ -90,12 +90,12 @@ if ($.isNode()) {
  } else {
     rlurlArr.push($.getdata('rlurl'))
     rlheaderArr.push($.getdata('rlheader'))
-    rlbodyArr.push($.getdata('rlbody'))
+   // rlbodyArr.push($.getdata('rlbody'))
     let rlcount = ($.getval('rlcount') || '1');
   for (let i = 2; i <= rlcount; i++) {
     rlurlArr.push($.getdata(`rlurl${i}`))
     rlheaderArr.push($.getdata(`rlheader${i}`))
-    rlbodyArr.push($.getdata(`rlbody${i}`))
+   // rlbodyArr.push($.getdata(`rlbody${i}`))
   }
 }
 !(async () => {
