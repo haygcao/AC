@@ -1,4 +1,4 @@
-name: rl
+name: 燃旅
 
 
 on:
@@ -26,7 +26,7 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【rl】'
+      - name: '运行 【燃旅】'
         if: env.RLHEADER
         run: |
           node rl.js
