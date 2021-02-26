@@ -35,8 +35,8 @@ jobs:
         run: |
           node runstep.js
         env:
-          RUNSTEPTOKEN: ${{ secrets.RUNSTEPTOKEN }}
-          RUNSTEPKEY: ${{ secrets.RUNSTEPKEY }}
+          RUNSTEP_TOKEN: ${{ secrets.RUNSTEP_TOKEN }}
+          RUNSTEP_KEY: ${{ secrets.RUNSTEP_KEY }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
