@@ -19,8 +19,7 @@ jobs:
         BBB_CASH: ${{ secrets.BBB_CASH }}
     steps:
       - name: Checkout
-        run: |
-          git clone https://github.com/Maomaoyu0319/Ziye.git ~/Ziye
+        uses: actions/checkout@v2
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -28,13 +27,11 @@ jobs:
       - name: npm install
         if: env.BBB_bububaoTOKEN
         run: |
-          cd ~/Ziye
           npm install
       - name: '运行 【步步宝】'
         if: env.BBB_bububaoTOKEN
         run: |
-          cd ~/Ziye
-          node Task/bububao.js
+          node bububao.js
         env:
           
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
